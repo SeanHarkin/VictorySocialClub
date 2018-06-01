@@ -1,19 +1,129 @@
-<!DOCTYPE html>
-<html>
- <head>
-  <meta charset="utf-8"/>
-  <link rel="stylesheet" type="text/css" href="mystyle.css">
-  <link href="http://fonts.googleapis.com/css?family=Karla:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-  <script src="https://d3js.org/d3.v5.min.js"></script>
-
-
-
- </head>
- <body>
-
- <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 487 487" id="logo">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1589.81 487.53">
   <defs>
+    <style>
+      .cls-1, .cls-2, .cls-3, .cls-6, .cls-7 {
+        fill: none;
+      }
 
+      .cls-1, .cls-13, .cls-3, .cls-4, .cls-6, .cls-7, .cls-8, .cls-9 {
+        stroke: #000;
+      }
+
+      .cls-1, .cls-4 {
+        stroke-linejoin: bevel;
+      }
+
+      .cls-1, .cls-4, .cls-7, .cls-8 {
+        stroke-width: 5px;
+      }
+
+      .cls-3 {
+        stroke-linecap: round;
+        stroke-width: 9px;
+      }
+
+      .cls-13, .cls-3, .cls-6, .cls-7, .cls-8, .cls-9 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-4, .cls-8, .cls-9 {
+        fill: #fff;
+      }
+
+      .cls-5 {
+        clip-path: url(#clip-path);
+      }
+
+      .cls-6 {
+        stroke-width: 3px;
+      }
+
+      .cls-13, .cls-9 {
+        stroke-width: 6px;
+      }
+
+      .cls-10, .cls-14 {
+        font-size: 36px;
+      }
+
+      .cls-10, .cls-12 {
+        font-family: OrderRg-Bold, Order;
+        font-weight: 700;
+      }
+
+      .cls-11 {
+        clip-path: url(#clip-path-2);
+      }
+
+      .cls-12 {
+        font-size: 32.29px;
+      }
+
+      .cls-14 {
+        font-family: OrderRg-Regular, Order;
+        letter-spacing: 0.04em;
+      }
+
+      .cls-15 {
+        letter-spacing: 0.02em;
+      }
+
+      .cls-16 {
+        letter-spacing: 0.04em;
+      }
+
+      .cls-17 {
+        letter-spacing: 0.03em;
+      }
+
+      .cls-18 {
+        letter-spacing: 0.02em;
+      }
+
+      .cls-19 {
+        letter-spacing: 0.03em;
+      }
+
+      .cls-20 {
+        letter-spacing: 0.03em;
+      }
+
+      .cls-21 {
+        letter-spacing: 0.03em;
+      }
+
+      .cls-22 {
+        letter-spacing: 0.01em;
+      }
+
+      .cls-23 {
+        letter-spacing: 0.03em;
+      }
+
+      .cls-24 {
+        letter-spacing: 0.04em;
+      }
+
+      .cls-25 {
+        letter-spacing: 0.04em;
+      }
+
+      .cls-26 {
+        letter-spacing: 0.02em;
+      }
+
+      .cls-27 {
+        letter-spacing: 0.03em;
+      }
+
+      .cls-28 {
+        letter-spacing: 0.03em;
+      }
+
+      .cls-29 {
+        letter-spacing: 0.02em;
+      }
+    </style>
     <clipPath id="clip-path" transform="translate(-69.62 -546.91)">
       <path class="cls-1" d="M100.68,822.6c0,74.33,15.16,95.57,15.16,95.57L152.55,897Z"/>
     </clipPath>
@@ -320,16 +430,3 @@
     </g>
   </g>
 </svg>
-
-
-<button id="left">left</button>
-<button id="right">right</button>
-<button id="up">up</button>
-<button id="down">down</button>
-
-
-
-<h2>HELLO</h2>
-
- </body>
-</html>
