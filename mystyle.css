@@ -7,8 +7,11 @@ body{
     display: block;
     margin: 8px;
     font-family: 'krla';
-    background-size: 250em;
-    background-position:center;
+    background-size: 164em;
+    /* position:  fixed; */
+    background-position-x: -1000px;
+    background-position-y: -200px;
+    /* background-position:center; */
     background-repeat: no-repeat;
 }
 p {
