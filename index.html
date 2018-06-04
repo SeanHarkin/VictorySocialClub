@@ -13,14 +13,18 @@
 <body>
 
 
-<div id="content">
+<!--<div id="content">-->
 
 <div class="person" id="Finlay">
 <h1>Finlay Braithwaite</h1>
 <h2>Master of Design</h2>
 <p>Finlay is a renaissance man of all trades</p>
+</div>
 
-
+<div class="person" id="Sean">
+<h1>Sean Harkin</h1>
+<h2>Master of Nothing</h2>
+<p>Sean doesn't even go here.</p>
 </div>
 
 
@@ -362,6 +366,7 @@
 <button class="nav down">down</button>
 
 <script>
+$(document).ready(() => {
 
 // Using the location.hash property to change the anchor part
 
@@ -468,8 +473,6 @@ $(".nav").hover(function(){
 });
 });
 
-//$(document).ready(() => {
-
 const $finlay = $('#Finlay');
 const $sean = $('#Sean');
 
@@ -482,7 +485,7 @@ $up.on( 'click', () => {
 $down.on( 'click', () => {
     $sean.show();
 }
-//})
+})
 
 </script>
 
