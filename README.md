@@ -1,2 +1,0 @@
-# NewSite
-Testing Git
