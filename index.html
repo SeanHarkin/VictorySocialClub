@@ -5,6 +5,7 @@
 		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <meta charset="utf-8"/>
   <link rel="stylesheet" type="text/css" href="mystyle.css">
+  <link rel=""
   <link href="http://fonts.googleapis.com/css?family=Karla:400,700,400italic,700italic" rel="stylesheet" type="text/css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
@@ -365,8 +366,7 @@
 <button class="nav up">up</button>
 <button class="nav down">down</button>
 
-<script>
-$(document).ready(() => {
+<script src="main.js">
 
 // Using the location.hash property to change the anchor part
 
@@ -472,21 +472,6 @@ $(".nav").hover(function(){
 
 });
 });
-
-const $finlay = $('#Finlay');
-const $sean = $('#Sean');
-
-$finlay.hide;
-$sean.hide;
-
-$up.on( 'click', () => {
-  $finlay.show();
-}
-$down.on( 'click', () => {
-    $sean.show();
-}
-})
-
 </script>
 
 

@@ -1,7 +1,14 @@
-/*$(document).ready(() => {
-const $up = $('#up');
-const $crest = $('#CREST');
+$(document).ready(() => {
+  const $finlay = $('#Finlay');
+  const $sean = $('#Sean');
 
-$up.on( 'click', () => {
-  $crest.hide();
-})*/
+  $finlay.hide;
+  $sean.hide;
+
+  $(".up").on( 'click', () => {
+    $finlay.show();
+  }
+  $(".down").on( 'click', () => {
+      $sean.show();
+  }
+  })
