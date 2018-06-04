@@ -4,11 +4,11 @@ body{
     color: #000000;
     background-color: #841b1b;
     display: block;
-    margin: 8px;
+    margin: 0px;
     font-family: 'krla';
-    background-size: 164em;
-    background-position-x: -1000px;
-    background-position-y: -200px;
+    background-size: 180em;
+    background-position-x: 0;
+    background-position-y: 0;
     background-repeat: no-repeat;
 }
 
@@ -78,4 +78,22 @@ body{
     }
 }
 
-#CREST {fill: #ceb61da3;transform-origin: center;position:  fixed;transform: scale(2);top: 0%;left: -80%;transition-property: top, left;transition-duration: 6s;transition-timing-function: cubic-bezier(0.68, -0.55, 0.27, 1.55);}
+#myFirstDiv{
+    
+height: -webkit-fill-available;
+    
+width: -webkit-fill-available;
+    
+padding:  0px;
+    
+margin:  0px;
+}
+#LOGO {position: fixed;t;transition-property: top, left, bottom;top: 0%;left: 0%;transform: translate(-50%,-50%);transition-duration: 2s;transition-timing-function: ease-in-out;}
+
+#CREST {fill: #60503257;transform-origin:  center;transition-property: transform;transition-duration: 3s;transition-timing-function: ease-in-out;}
+
+p{
+    
+color: #8f8d90;
+font-family:sans-serif
+}
