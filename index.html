@@ -13,20 +13,24 @@
 <body>
 
 
-<div id="content">
+<!--<div id="content">-->
 
 <div class="person" id="Finlay">
 <h1>Finlay Braithwaite</h1>
 <h2>Master of Design</h2>
 <p>Finlay is a renaissance man of all trades</p>
+</div>
 
-
+<div class="person" id="Sean">
+<h1>Sean Harkin</h1>
+<h2>Master of Nothing</h2>
+<p>Sean doesn't even go here.</p>
 </div>
 
 
 
 
-</div> 
+</div>
 
 <div id="myFirstDiv">
 <svg version="1.1" id="LOGO" xmlns="http://www.w3.org/2000/svg"
@@ -362,6 +366,7 @@
 <button class="nav down">down</button>
 
 <script>
+$(document).ready(() => {
 
 // Using the location.hash property to change the anchor part
 
@@ -406,13 +411,13 @@ function changePart(tierNo, partNo) {
 
 
 $(".nav").hover(function(){
-	$("#CREST").css({"fill":"#ffffff4d"});		
+	$("#CREST").css({"fill":"#ffffff4d"});
 },	function(){
-		$("#CREST").css({"fill":"#60503257"});		
+		$("#CREST").css({"fill":"#60503257"});
 	});
 	$(".nav").mousedown(function(){
-	
-	
+
+
 });
 
 
@@ -441,8 +446,8 @@ $(".nav").hover(function(){
 	$("#CREST").css({"transform":"rotate(.25turn)"});
 	$("#LOGO").css({"top":"50%", "left":"100%"});
 
-	
-	
+
+
 });
 
 
@@ -452,8 +457,8 @@ $(".nav").hover(function(){
 	$("#CREST").css({"transform":"rotate(.5turn)"});
 	$("#LOGO").css({"top":"0%", "left": "50%"});
 
-	
-	
+
+
 });
 
 
@@ -463,16 +468,26 @@ $(".nav").hover(function(){
 	$("#CREST").css({"transform":"rotate(.75turn)"});
 	$("#LOGO").css({"top":"100%", "left":"50%"});
 
-	
-	
+
+
+});
 });
 
+const $finlay = $('#Finlay');
+const $sean = $('#Sean');
+
+$finlay.hide;
+$sean.hide;
+
+$up.on( 'click', () => {
+  $finlay.show();
+}
+$down.on( 'click', () => {
+    $sean.show();
+}
+})
 
 </script>
-
-
-
-
 
 
 

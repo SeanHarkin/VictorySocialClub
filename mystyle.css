@@ -78,13 +78,13 @@ body{
 }
 
 #myFirstDiv{
-    
+
 height: -webkit-fill-available;
-    
+
 width: -webkit-fill-available;
-    
+
 padding:  0px;
-    
+
 margin:  0px;
 }
 #LOGO {position: fixed;t;/* height: 500%; */transition-property: top, left, bottom;top: 0%;left: 0%;transform: translate(-50%,-50%);transition-duration: 2s;transition-timing-function: ease-in-out;}
@@ -92,16 +92,37 @@ margin:  0px;
 #CREST {fill: #60503257;transform-origin:  center;transition-property: transform;transition-duration: 3s;transition-timing-function: ease-in-out;}
 
 p{
-    color: #8f8d90;
-    font-family: Karla;
-    font-size: xx-large;
-    text-align: right;
-    margin: 28px 44px 10px 10px;
-    left:  50%;
-    top: 50%;
-    position: fixed;
+color: red;
+font-family: Karla;
+font-size: x-large;
+text-align: right;
+margin: 28px 44px 10px 10px;
+left: 50%;
+top: 50%;
+position: fixed;
 }
+h1{
 
-#Finlay{
-    display:none;
+    color: yellow;
+    font-family: Karla;
+    font-size: xx-large;
+    text-align: right;
+    margin: 28px 44px 10px 10px;
+    left: 50%;
+    top: 20%;
+    position: fixed;
 }
+h2{
+    color: HotPink;
+    font-family: Karla;
+    font-size: xx-large;
+    text-align: right;
+    margin: 28px 44px 10px 10px;
+    left: 50%;
+    top: 35%;
+    position: fixed;
+
+}
+/*#Finlay{
+    display:none;
+}*/
