@@ -5,7 +5,6 @@ body{
     background-color: #841b1b;
     display: block;
     margin: 0px;
-    font-family: 'krla';
     background-size: 180em;
     background-position-x: 0;
     background-position-y: 0;
@@ -88,12 +87,21 @@ padding:  0px;
     
 margin:  0px;
 }
-#LOGO {position: fixed;t;transition-property: top, left, bottom;top: 0%;left: 0%;transform: translate(-50%,-50%);transition-duration: 2s;transition-timing-function: ease-in-out;}
+#LOGO {position: fixed;t;/* height: 500%; */transition-property: top, left, bottom;top: 0%;left: 0%;transform: translate(-50%,-50%);transition-duration: 2s;transition-timing-function: ease-in-out;}
 
 #CREST {fill: #60503257;transform-origin:  center;transition-property: transform;transition-duration: 3s;transition-timing-function: ease-in-out;}
 
 p{
-    
-color: #8f8d90;
-font-family:sans-serif
+    color: #8f8d90;
+    font-family: Karla;
+    font-size: xx-large;
+    text-align: right;
+    margin: 28px 44px 10px 10px;
+    left:  50%;
+    top: 50%;
+    position: fixed;
+}
+
+#Finlay{
+    display:none;
 }

@@ -10,13 +10,24 @@
 
 
  </head>
- <body>
+<body>
 
 
 <div id="content">
-<p id="firstContent"> This is the test content. </p>
+
+<div class="person" id="Finlay">
+<h1>Finlay Braithwaite</h1>
+<h2>Master of Design</h2>
+<p>Finlay is a renaissance man of all trades</p>
+
+
+</div>
+
+
+
 
 </div> 
+
 <div id="myFirstDiv">
 <svg version="1.1" id="LOGO" xmlns="http://www.w3.org/2000/svg"
 	 viewBox="0 0 600 600">
@@ -351,6 +362,16 @@
 <button class="nav down">down</button>
 
 <script>
+
+// Using the location.hash property to change the anchor part
+
+
+
+// Alert some text if there has been changes to the anchor part
+function myFunction() {
+    alert("The anchor part has changed!");
+}
+
 let frameOffset = 0.70;
 
 /* let leftCALC = -($("#LOGO").width() * frameOffset);
@@ -371,8 +392,14 @@ let horMidX = horMidCALC.toString() + "px";
 console.log(leftX, rightX, topX, bottomX, vertMidX, horMidX);
 
 */
+let currentHash = 0;
+let currentTier = 0;
 
-
+function changePart(tierNo, partNo) {
+    location.hash = partNo.toString()+"&"+tierNo.toString();
+    var x = location.hash;
+    $(partNo).css({"display":"block"});
+}
 
 
 
@@ -389,19 +416,28 @@ $(".nav").hover(function(){
 });
 
 
-	$(".left").mousedown(function(){
+/*	$(".left").mousedown(function(){
+;
+
+}); */
+
+	$(".left").click(function(){
+	currentHash++;
+	changePart(currentHash, currentTier);
 	$("#CREST").css({"transform":"rotate(0turn)"});
 	$("#LOGO").css({"top":"50%", "left":"0%"});
-	//	$("#LOGO").css({"top":vertMidX, "left":leftX});
+	//	$("#LOGO").css({"top":vertMidX, "left":leftX})
 
 
 
-	
-	
-});
+
+
+	});
 
 
 	$(".right").mousedown(function(){
+	currentHash--;
+	changePart(currentHash, currentTier);
 	$("#CREST").css({"transform":"rotate(.25turn)"});
 	$("#LOGO").css({"top":"50%", "left":"100%"});
 
@@ -411,6 +447,8 @@ $(".nav").hover(function(){
 
 
 	$(".up").mousedown(function(){
+	currentTier++;
+	changePart(currentHash, currentTier);
 	$("#CREST").css({"transform":"rotate(.5turn)"});
 	$("#LOGO").css({"top":"0%", "left": "50%"});
 
@@ -420,6 +458,8 @@ $(".nav").hover(function(){
 
 
 	$(".down").mousedown(function(){
+	currentTier--;
+	changePart(currentHash, currentTier);
 	$("#CREST").css({"transform":"rotate(.75turn)"});
 	$("#LOGO").css({"top":"100%", "left":"50%"});
 
@@ -427,7 +467,12 @@ $(".nav").hover(function(){
 	
 });
 
+
 </script>
+
+
+
+
 
 
 
