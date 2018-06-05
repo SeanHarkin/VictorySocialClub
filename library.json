@@ -1,21 +1,40 @@
 {
-    "Victory Social Club":{
+    "Victory Social Club": [
+    {
+      "places": [
+        {
+          "h1":"colour",
+          "h2":"Grading Room",
+          "p":"This is a <b>fun</b> room"
+        },
+        {
+          "h1":"Sound",
+          "h2":"Audio Room",
+          "p":"This is a <b>sad</b> room"
+        },
+        {
+          "h1":"Edit",
+          "h2":"Grading Room",
+          "p":"This is an <b>important</b> room"
+        }
+    ],
       "members": [
         {
-          "name": "Finlay Braithwaite",
-          "Title": "Master of Design",
-          "Bio": "A juicer of a handy dude" 
+          "h1": "Finlay Braithwaite",
+          "h2": "Master of Design",
+          "p": "A juicer of a handy dude" 
         },
         {
-          "name": "Alex Kurina",
-          "Title": "Great Person",
-          "Bio": "What else can be said?" 
+          "h1": "Alex Kurina",
+          "h2": "Great Person",
+          "p": "What else can be said?" 
         },
         {
-          "name": "Tony! Toni! Tone!",
-          "Title": "Three Tonys!",
-          "Bio": "What!!!!!" 
+          "h1": "Tony! Toni! Tone!",
+          "h2": "Three Tonys!",
+          "p": "What!!!!!" 
         }
       ]
     }
+    ]
 }
