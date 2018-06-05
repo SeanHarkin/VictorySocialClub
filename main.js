@@ -79,6 +79,7 @@ $(".nav").hover(function(){
 	$("#CREST").css({"transform":"rotate(.75turn)"});
 	$("#LOGO").css({"top":"100%", "left":"50%"});
 	
+	
 });
 
 });
