@@ -5,8 +5,9 @@
 		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <meta charset="utf-8"/>
   <link rel="stylesheet" type="text/css" href="mystyle.css">
-  <link href="http://fonts.googleapis.com/css?family=Karla:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Karla:400,700,400italic,700italic" rel="stylesheet" type="text/css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="main.js"></script>
 
 
  </head>
@@ -15,13 +16,9 @@
 
 <div id="content">
 
-<div class="person" id="Finlay">
-<h1>Finlay Braithwaite</h1>
-<h2>Master of Design</h2>
-<p>Finlay is a renaissance man of all trades</p>
-
-
-</div>
+<h1>h1</h1>
+<h2>h2</h2>
+<p>p</p>
 
 
 
@@ -363,109 +360,6 @@
 
 <script>
 
-// Using the location.hash property to change the anchor part
-
-
-
-// Alert some text if there has been changes to the anchor part
-function myFunction() {
-    alert("The anchor part has changed!");
-}
-
-let frameOffset = 0.70;
-
-/* let leftCALC = -($("#LOGO").width() * frameOffset);
-let rightCALC = -($( window ).width()) - leftCALC;
-let topCALC = -($("#LOGO").height() * frameOffset);
-let bottomCALC = -($( window ).height()) - topCALC;
-let vertMidCALC = $( window ).height() / 2 - $("#LOGO").height() /2;
-let horMidCALC = $( window ).width() / 2 - $("#LOGO").width() /2;
-
-
-let leftX = leftCALC.toString() + "px";
-let rightX = rightCALC.toString() + "px";
-let topX = topCALC.toString() + "px";
-let bottomX = bottomCALC.toString() + "px";
-let vertMidX = vertMidCALC.toString() + "px";
-let horMidX = horMidCALC.toString() + "px";
-
-console.log(leftX, rightX, topX, bottomX, vertMidX, horMidX);
-
-*/
-let currentHash = 0;
-let currentTier = 0;
-
-function changePart(tierNo, partNo) {
-    location.hash = partNo.toString()+"&"+tierNo.toString();
-    var x = location.hash;
-    $(partNo).css({"display":"block"});
-}
-
-
-
-
-
-$(".nav").hover(function(){
-	$("#CREST").css({"fill":"#ffffff4d"});		
-},	function(){
-		$("#CREST").css({"fill":"#60503257"});		
-	});
-	$(".nav").mousedown(function(){
-	
-	
-});
-
-
-/*	$(".left").mousedown(function(){
-;
-
-}); */
-
-	$(".left").click(function(){
-	currentHash++;
-	changePart(currentHash, currentTier);
-	$("#CREST").css({"transform":"rotate(0turn)"});
-	$("#LOGO").css({"top":"50%", "left":"0%"});
-	//	$("#LOGO").css({"top":vertMidX, "left":leftX})
-
-
-
-
-
-	});
-
-
-	$(".right").mousedown(function(){
-	currentHash--;
-	changePart(currentHash, currentTier);
-	$("#CREST").css({"transform":"rotate(.25turn)"});
-	$("#LOGO").css({"top":"50%", "left":"100%"});
-
-	
-	
-});
-
-
-	$(".up").mousedown(function(){
-	currentTier++;
-	changePart(currentHash, currentTier);
-	$("#CREST").css({"transform":"rotate(.5turn)"});
-	$("#LOGO").css({"top":"0%", "left": "50%"});
-
-	
-	
-});
-
-
-	$(".down").mousedown(function(){
-	currentTier--;
-	changePart(currentHash, currentTier);
-	$("#CREST").css({"transform":"rotate(.75turn)"});
-	$("#LOGO").css({"top":"100%", "left":"50%"});
-
-	
-	
-});
 
 
 </script>

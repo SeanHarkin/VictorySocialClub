@@ -1,0 +1,21 @@
+{
+    "Victory Social Club":{
+      "members": [
+        {
+          "name": "Finlay Braithwaite",
+          "Title": "Master of Design",
+          "Bio": "A juicer of a handy dude" 
+        },
+        {
+          "name": "Alex Kurian",
+          "Title": "Great Person",
+          "Bio": "What else can be said?" 
+        },
+        {
+          "name": "Tony! Toni! Tone!",
+          "Title": "Three Tonys!",
+          "Bio": "What!!!!!" 
+        }
+      ]
+    }
+}

@@ -92,16 +92,45 @@ margin:  0px;
 #CREST {fill: #60503257;transform-origin:  center;transition-property: transform;transition-duration: 3s;transition-timing-function: ease-in-out;}
 
 p{
-    color: #8f8d90;
-    font-family: Karla;
-    font-size: xx-large;
-    text-align: right;
-    margin: 28px 44px 10px 10px;
-    left:  50%;
-    top: 50%;
-    position: fixed;
+    
+color: #8f8d90;
+    
+font-family: Karla;
+    
+font-size: xx-large;
+    
+text-align: right;
+    
+margin: 28px 44px 10px 10px;
+    
+left:  50%;
+    
+top: 50%;
+    
+position: fixed;
 }
 
-#Finlay{
-    display:none;
+h1{
+    color: #8f8d90;
+    font-family: Karla;
+    font-size: xx-large;
+    text-align: right;
+    margin: 28px 44px 10px 10px;
+    left:  50%;
+    top: 20%;
+    position: fixed;
+}
+h2{
+    color: #8f8d90;
+    font-family: Karla;
+    font-size: xx-large;
+    text-align: right;
+    margin: 28px 44px 10px 10px;
+    left:  50%;
+    top: 35%;
+    position: fixed;
+}
+
+.my-new-list{
+    color: white;
 }
