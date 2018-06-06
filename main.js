@@ -85,7 +85,7 @@ $(".nav").hover(function(){
 	currentHash++;
     setText(currentHash, currentTier);
 	$("#CREST").css({"transform":"rotate(0turn)"});
-	$("#LOGO").css({"top":"50%", "left":"0%"});
+	$(".logo").css({"top":"50%", "left":"0%"});
 
 	});
 
@@ -94,7 +94,7 @@ $(".nav").hover(function(){
 	currentHash--;
     setText(currentHash, currentTier);
 	$("#CREST").css({"transform":"rotate(.25turn)"});
-	$("#LOGO").css({"top":"50%", "left":"100%"});
+	$(".logo").css({"top":"50%", "left":"100%"});
 	
 });
 
@@ -104,7 +104,7 @@ $(".nav").hover(function(){
     //console.log(currentHash, currentTier);
 
 	$("#CREST").css({"transform":"rotate(.5turn)"});
-	$("#LOGO").css({"top":"0%", "left": "50%"});
+	$(".logo").css({"top":"0%", "left": "50%"});
 	
 });
 
@@ -114,7 +114,7 @@ $(".nav").hover(function(){
     //console.log(currentHash, currentTier);
 
 	$("#CREST").css({"transform":"rotate(.75turn)"});
-	$("#LOGO").css({"top":"100%", "left":"50%"});
+	$(".logo").css({"top":"100%", "left":"50%"});
 	
 	
 });
