@@ -2,7 +2,7 @@
 body{
     background-image: url(mattStevens.png);
     color: #000000;
-    background-color: #841b1b;
+    background-color: #9b1616;
     display: block;
     margin: 0px;
     background-size: 180em;
@@ -18,13 +18,16 @@ body{
     padding: 1em 1em;
     text-align: center;
     position: relative;
+    font-family:  sans-serif;
 }
 .left {
     top: 50%;
-    left: 0%;
+    left: 0;
     transform: translate(50%, -50%);
-        position: fixed;
-
+    position: fixed;
+    height:  100px;
+    width:  100px;
+    transform: rotate(45deg);
 }
 .right {
     top: 50%;
@@ -89,7 +92,7 @@ margin:  0px;
 }
 #LOGO {position: fixed;t;/* height: 500%; */transition-property: top, left, bottom;top: 0%;left: 0%;transform: translate(-50%,-50%);transition-duration: 2s;transition-timing-function: ease-in-out;}
 
-#CREST {fill: #60503257;transform-origin:  center;transition-property: transform;transition-duration: 3s;transition-timing-function: ease-in-out;}
+#CREST {fill: #c6871157;transform-origin:  center;transition-property: transform;transition-duration: 3s;transition-timing-function: ease-in-out;}
 
 p{
     

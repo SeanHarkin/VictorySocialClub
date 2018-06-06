@@ -13,7 +13,7 @@ $( document ).ready(function() {
 
 
 //VSC = JSON.parse('{"Victory Social Club":{"members":[{"name":"Taco Jesus","Title":"TestBoi","Bio":"Candy"},{"name":"Finlay Braithwaite","Title":"Master of Design","Bio":"A juicer of a handy dude"},{"name":"Alex Kurina","Title":"Great Person","Bio":"What else can be said?"},{"name":"Tony! Toni! Tone!","Title":"Three Tonys!","Bio":"What!!!!!"}]}}');
-VSC = JSON.parse('{"Victory Social Club":[{"places":[{"h1":"colour","h2":"Grading Room","p":"This is a <b>fun</b> room"},{"h1":"Sound","h2":"Audio Room","p":"This is a <b>sad</b> room"},{"h1":"Edit","h2":"Grading Room","p":"This is an <b>important</b> room"}],"members":[{"h1":"Finlay Braithwaite","h2":"Master of Design","p":"A juicer of a handy dude"},{"h1":"Alex Kurina","h2":"Great Person","p":"What else can be said?"},{"h1":"Tony! Toni! Tone!","h2":"Three Tonys!","p":"What!!!!!"}]}]}');
+VSC = JSON.parse('{"Victory Social Club":[{"places":[{"h1":"colour","h2":"Grading Room","p":"This is a <b>fun</b> room"},{"h1":"Sound","h2":"Audio Room","p":"This is a <b>sad</b> room"},{"h1":"Edit","h2":"Grading Room","p":"This is an <b>important</b> room"},{"h1":"Tacorium","h2":"The Taco Room","p":"This is the <b>taco</b> room"}],"members":[{"h1":"Finlay Braithwaite","h2":"Master of Design","p":"A juicer of a handy dude"},{"h1":"Alex Kurina","h2":"Great Person","p":"What else can be said?"},{"h1":"Tony! Toni! Tone!","h2":"Three Tonys!","p":"What!!!!!"}]}]}');
 console.log(VSC);
 
 

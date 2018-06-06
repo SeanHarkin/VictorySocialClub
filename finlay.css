@@ -1,0 +1,140 @@
+
+body{
+    background-image: url(mattStevens.png);
+    color: #000000;
+    background-color: #9b1616;
+    display: block;
+    margin: 0px;
+    background-size: 180em;
+    background-position-x: 0;
+    background-position-y: 0;
+    background-repeat: no-repeat;
+}
+
+
+.nav {
+    background-color: #234869;
+    color: white;
+    padding: 1em 1em;
+    text-align: center;
+    position: relative;
+    font-family:  sans-serif;
+}
+.left {
+    top: 50%;
+    left: 0;
+    transform: translate(50%, -50%);
+    position: fixed;
+    height:  100px;
+    width:  100px;
+    transform: rotate(45deg);
+}
+.right {
+    top: 50%;
+    right: 0%;
+    transform: translate(-50%, -50%);
+        position: fixed;
+
+}
+.up {
+
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+        position: fixed;
+
+}
+.down {bottom: 0%;left: 50%;transform: translate(-50%, -50%);position: fixed;size: (1,1);}
+
+#SHIELD_1 {
+    display: none;
+}
+
+#SHIELD_2 {
+    display: none;
+}
+@keyframes example {
+    0% {
+    background-color: crimson;
+    font-size: 3em;
+    transform: rotate(-.01turn);
+    }
+    50% {
+    border-style:  dotted;
+    }
+        100% {
+    background-color: #2196F3;
+    font-size: 10em;
+    transform: rotate(.01turn);
+    border-style:  dashed;
+    }
+}
+@keyframes spinning {
+    0%{
+       font-size: 10em;
+       transform: rotate(0turn);
+    }
+    100%{
+        font-size: 100em;
+        transform: rotate(1turn);
+    }
+}
+
+#myFirstDiv{
+    
+height: -webkit-fill-available;
+    
+width: -webkit-fill-available;
+    
+padding:  0px;
+    
+margin:  0px;
+}
+#LOGO {position: fixed;t;/* height: 500%; */transition-property: top, left, bottom;top: 0%;left: 0%;transform: translate(-50%,-50%);transition-duration: 2s;transition-timing-function: ease-in-out;}
+
+#CREST {fill: #c6871157;transform-origin:  center;transition-property: transform;transition-duration: 3s;transition-timing-function: ease-in-out;}
+
+p{
+    
+color: #8f8d90;
+    
+font-family: Karla;
+    
+font-size: xx-large;
+    
+text-align: right;
+    
+margin: 28px 44px 10px 10px;
+    
+left:  50%;
+    
+top: 50%;
+    
+position: fixed;
+}
+
+h1{
+    color: #8f8d90;
+    font-family: Karla;
+    font-size: xx-large;
+    text-align: right;
+    margin: 28px 44px 10px 10px;
+    left:  50%;
+    top: 20%;
+    position: fixed;
+    
+}
+h2{
+    color: #8f8d90;
+    font-family: Karla;
+    font-size: xx-large;
+    text-align: right;
+    margin: 28px 44px 10px 10px;
+    left:  50%;
+    top: 35%;
+    position: fixed;
+}
+
+.my-new-list{
+    color: white;
+}

@@ -5,34 +5,43 @@
         {
           "h1":"colour",
           "h2":"Grading Room",
-          "p":"This is a <b>fun</b> room"
+          "p":"This is a <b>fun</b> room",
+          "svgFill:"#a5181880"
         },
         {
           "h1":"Sound",
           "h2":"Audio Room",
-          "p":"This is a <b>sad</b> room"
+          "p":"This is a <b>sad</b> room",
+          "svgFill:"#a5181880"
+
         },
         {
           "h1":"Edit",
           "h2":"Grading Room",
-          "p":"This is an <b>important</b> room"
+          "p":"This is an <b>important</b> room",
+          "svgFill:"#a5181880"
+
         }
     ],
       "members": [
         {
           "h1": "Finlay Braithwaite",
           "h2": "Master of Design",
-          "p": "A juicer of a handy dude" 
+          "p": "A juicer of a handy dude",
+          "svgFill:"#a5181880"
+ 
         },
         {
           "h1": "Alex Kurina",
           "h2": "Great Person",
-          "p": "What else can be said?" 
+          "p": "What else can be said?",
+          "svgFill:"#a5181880" 
         },
         {
           "h1": "Tony! Toni! Tone!",
           "h2": "Three Tonys!",
-          "p": "What!!!!!" 
+          "p": "What!!!!!",
+          "svgFill:"#a5181880" 
         }
       ]
     }
