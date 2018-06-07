@@ -1,0 +1,81 @@
+*{
+    background-color: #000;
+}
+svg{
+    width: 50%;
+    margin: auto;
+    display: block;
+    padding-top: 50px;
+}
+.shield{
+    animation: stroke_fill 6s linear forwards;
+    stroke-dasharray: 1588;
+    stroke-dashoffset: 1200;
+    animation-delay: .3s;
+}
+.slash{
+    animation: dash_fill 6s linear forwards;
+    stroke-dasharray: 888;
+    stroke-dashoffset: 900;
+    animation-delay: 2s;
+}
+.vsc-v, .vsc-s, .vsc-c{
+    animation: path_fill 5s linear forwards;
+    stroke-dasharray: 55;
+    stroke-dashoffset: 55;
+    animation-delay: .6s;
+}
+
+@keyframes stroke_fill{
+    0%{
+        stroke: #4f4f4e;
+    }
+    50%{
+        stroke: #4f4f4e;
+        stroke-dashoffset: 0;
+    }
+    75%{
+        stroke: #4d4d4d;
+        stroke-dashoffset: 0;
+    }
+    100%{
+        stroke: #f9d748;
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes path_fill{
+    0% {
+        fill: #fff;
+  }
+  50% {
+    fill: #eee;
+    stroke-dashoffset: 0;
+  }
+  75% {
+    fill: #eee;
+    stroke-dashoffset: 0;
+  }
+  100% {
+    fill: #000;
+      stroke: #000;
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes dash_fill{
+    0% {
+    fill: #fff;
+  }
+  50% {
+    fill: #eee;
+    stroke-dashoffset: 0;
+  }
+  75% {
+    fill: #4d4d5d;
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke: #f9d748;
+    stroke-dashoffset: 0;
+  }
+}
