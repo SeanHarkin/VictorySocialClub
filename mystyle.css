@@ -111,11 +111,20 @@
 }
 
 /*FINLAY*/
+
+.bg{
+    background-image: url(Finlay.png);
+    width: 100%;
+    position: fixed;
+    z-index:  1000;
+}
 body {
     display: block;
     margin: 0px;
     background-color: black;
     position:  fixed;
+    background-image: none;
+    background-size: cover;
 }
 
 .nav {

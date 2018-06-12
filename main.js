@@ -1,55 +1,50 @@
 let VSC = {
-    "Victory Social Club": [
-    {
-      "places": [
-        {
-          "h1":"colour",
-          "h2":"Grading Room",
-          "p":"This is a <b>fun</b> room"
-        },
-        {
-          "h1":"Sound",
-          "h2":"Audio Room",
-          "p":"This is a <b>sad</b> room"
-        },
-        {
-          "h1":"Edit",
-          "h2":"Grading Room",
-          "p":"This is an <b>important</b> room"
-        }
-    ],
-      "members": [
-        {
-          "h1": "Finlay Braithwaite",
-          "h2": "Master of Design",
-          "p": "A juicer of a handy dude",
-          "background": {
-              "source":"Finlay.png",
-              "top":"0%",
-              "left":"0%",
-              "width":"0%"
-          },
-        },
-        {
-          "h1": "Alex Kurina",
-          "h2": "Great Person",
-          "p": "What else can be said?" 
-        },
-        {
-          "h1": "Tony! Toni! Tone!",
-          "h2": "Three Tonys!",
-          "p": "What!!!!! HI HI HI HI HI" 
-        }
-      ]
-    }
-    ]
+    "Victory Social Club": [{
+        "places": [{
+            "h1": "colour",
+            "h2": "Grading Room",
+            "p": "This is a <b>fun</b> room"
+        }, {
+            "h1": "Sound",
+            "h2": "Audio Room",
+            "p": "This is a <b>sad</b> room"
+        }, {
+            "h1": "Edit",
+            "h2": "Grading Room",
+            "p": "This is an <b>important</b> room"
+        }],
+        "members": [{
+            "h1": "Finlay Braithwaite",
+            "h2": "Master of Design",
+            "p": "A juicer of a handy dude",
+            "background": {
+                "source": "url(Finlay.png)",
+                "top": "0%",
+                "left": "0%",
+                "width": "0%"
+            },
+        }, {
+            "h1": "Alex Kurina",
+            "h2": "Great Person",
+            "p": "What else can be said?",
+            "background": {
+                "source": "url(Colour.png)",
+                "top": "0%",
+                "left": "0%",
+                "width": "0%"
+            },
+        }, {
+            "h1": "Tony! Toni! Tone!",
+            "h2": "Three Tonys!",
+            "p": "What!!!!! HI HI HI HI HI"
+        }]
+    }]
 }
 let currentHash = 999;
 let currentTier = 999;
 
 //let VSC = 5;
 let tierCALC = Math.abs(currentTier % 3);
-
 
 $(document).ready(function() {
 
@@ -83,7 +78,6 @@ $(document).ready(function() {
 
     }
 
-
     function setText(index, tier) {
         tierCALC = Math.abs(tier % 3);
 
@@ -113,6 +107,12 @@ $(document).ready(function() {
             $("p").text(bio);
             $(".left").text(VSC["Victory Social Club"]["0"].members[memberCALC(index + 1)].h1);
             $(".right").text(VSC["Victory Social Club"]["0"].members[memberCALC(index - 1)].h1);
+            $("body").css({
+                "background-image": VSC["Victory Social Club"]["0"].members[memberCALC(index)].background.source
+            });
+            $("body").css({
+                "background-image": VSC["Victory Social Club"]["0"].members[memberCALC(index)].background.source
+            });
 
         } else if (tierCALC == 2) {
             //let memberNO = VSC["Victory Social Club"].members.length;
@@ -146,32 +146,31 @@ $(document).ready(function() {
 
     $(".left").click(function() {
 
-        if (tierCALC == 0){
-        currentTier++;
-        setText(currentHash, currentTier);
-        $("#CREST").css({
-            "transform": "rotate(1turn)"
-        });
-        $("#LOGO").css({
-            "top": "50%",
-            "left": "-60%",
-            "width":"300%"
+        if (tierCALC == 0) {
+            currentTier++;
+            setText(currentHash, currentTier);
+            $("#CREST").css({
+                "transform": "rotate(1turn)"
+            });
+            $("#LOGO").css({
+                "top": "50%",
+                "left": "-60%",
+                "width": "300%"
 
-        });    
+            });
+
+        } else {
+            currentHash++;
+            setText(currentHash, currentTier);
+            $("#CREST").css({
+                "transform": "rotate(1turn)"
+            });
+            $("#LOGO").css({
+                "top": "50%",
+                "left": "-60%",
+                "width": "300%"
+            });
         }
-        else{
-              currentHash++;
-        setText(currentHash, currentTier);
-        $("#CREST").css({
-            "transform": "rotate(1turn)"
-        });
-        $("#LOGO").css({
-            "top": "50%",
-            "left": "-60%",
-            "width":"300%"
-        });
-        }
-      
 
     });
 
