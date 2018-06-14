@@ -63,7 +63,7 @@ let VSC = {
             "p": "A juicer of a handy dude",
             "text-align": "left",
             "left": "13%",
-            "text-color":"rgb(146, 53, 39)",
+            "text-color": "#cba311",
             "background": {
                 "source": "url(finlay.png)"
             },
@@ -79,6 +79,7 @@ let VSC = {
             "p": "Alex Kurina is an award-winning designer, filmmaker and media artist from Toronto, Canada. He holds a BFA from Ryerson University’s New Media program where he currently teaches. He has worked for a number of international commercial clients in various creative capacities and has had work exhibited at the Montreal Museum of Fine Art, InterAccess (Toronto), The Guggenheim (New York) and Eyebeam (New York).",
             "text-align": "right",
             "left": "45%",
+            "text-color": "#c34c12",
             "background": {
                 "source": "url(alex.png)"
             },
@@ -94,13 +95,14 @@ let VSC = {
             "p": "What else can be said?",
             "text-align": "left",
             "left": "13%",
+            "text-color": "#c34c12",
             "background": {
                 "source": "url(zach.png)"
             },
             "logo": {
                 "rotate": "rotate(.44turn)",
                 "top": "50%",
-                "left": "-60%",
+                "left": "174%",
                 "width": "300%"
             },
         }, {
@@ -109,13 +111,14 @@ let VSC = {
             "p": "What else can be said?",
             "text-align": "right",
             "left": "45%",
+            "text-color": "#824549",
             "background": {
                 "source": "url(andres.png)"
             },
             "logo": {
                 "rotate": "rotate(10turn)",
-                "top": "50%",
-                "left": "-60%",
+                "top": "230%",
+                "left": "50%",
                 "width": "300%"
             },
         }, {
@@ -124,7 +127,7 @@ let VSC = {
             "p": "What else can be said?",
             "text-align": "left",
             "left": "13%",
-            "text-color":"black",
+            "text-color": "black",
             "background": {
                 "source": "url(ryan.png)"
             },
@@ -140,7 +143,8 @@ let VSC = {
             "p": "What else can be said?",
             "text-align": "right",
             "left": "45%",
-            "text-color":"#cba311","background": {
+            "text-color": "#cba311",
+            "background": {
                 "source": "url(mike.png)"
             },
             "logo": {
