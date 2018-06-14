@@ -225,11 +225,17 @@ body {
 }
 
 h1,h2,p {
-    color: #8f8d90;
+    color: #e2be23;
     font-family: Karla;
     text-align: left;
+    transition-property: text-align;
+    transition-duration: 2s;
 }
 
+h1,h2,p,.nav{
+    transition-property:color;
+    transition-duration:2s;
+}
 p {
     font-size: 1em;
 }

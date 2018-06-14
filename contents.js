@@ -63,8 +63,9 @@ let VSC = {
             "p": "A juicer of a handy dude",
             "text-align": "left",
             "left": "13%",
+            "text-color":"rgb(146, 53, 39)",
             "background": {
-                "source": "url(Englebert.png)"
+                "source": "url(finlay.png)"
             },
             "logo": {
                 "rotate": "rotate(.5turn)",
@@ -79,10 +80,10 @@ let VSC = {
             "text-align": "right",
             "left": "45%",
             "background": {
-                "source": "url(Colour.png)"
+                "source": "url(alex.png)"
             },
             "logo": {
-                "rotate": "rotate(25turn)",
+                "rotate": "rotate(.75turn)",
                 "top": "50%",
                 "left": "-60%",
                 "width": "300%"
@@ -94,10 +95,10 @@ let VSC = {
             "text-align": "left",
             "left": "13%",
             "background": {
-                "source": "url(Colour.png)"
+                "source": "url(zach.png)"
             },
             "logo": {
-                "rotate": "rotate(20turn)",
+                "rotate": "rotate(.44turn)",
                 "top": "50%",
                 "left": "-60%",
                 "width": "300%"
@@ -109,7 +110,7 @@ let VSC = {
             "text-align": "right",
             "left": "45%",
             "background": {
-                "source": "url(Colour.png)"
+                "source": "url(andres.png)"
             },
             "logo": {
                 "rotate": "rotate(10turn)",
@@ -123,11 +124,12 @@ let VSC = {
             "p": "What else can be said?",
             "text-align": "left",
             "left": "13%",
+            "text-color":"black",
             "background": {
-                "source": "url(Colour.png)"
+                "source": "url(ryan.png)"
             },
             "logo": {
-                "rotate": "rotate(1000turn)",
+                "rotate": "rotate(.66turn)",
                 "top": "50%",
                 "left": "-60%",
                 "width": "300%"
@@ -138,11 +140,11 @@ let VSC = {
             "p": "What else can be said?",
             "text-align": "right",
             "left": "45%",
-            "background": {
-                "source": "url(.png)"
+            "text-color":"#cba311","background": {
+                "source": "url(mike.png)"
             },
             "logo": {
-                "rotate": "rotate(2turn)",
+                "rotate": "rotate(.22turn)",
                 "top": "50%",
                 "left": "-60%",
                 "width": "300%"

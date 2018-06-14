@@ -85,6 +85,9 @@ $(document).ready(function() {
             $("#CREST").css({
                 "transform": VSC["Victory Social Club"]["0"].members[memberCALC(index)].logo.rotate
             });
+               $("p, h1, h2, .nav").css({
+                "color": VSC["Victory Social Club"]["0"].members[memberCALC(index)]["text-color"]
+            });
 
         } else if (tierCALC == 2) {
             //let memberNO = VSC["Victory Social Club"].members.length;
