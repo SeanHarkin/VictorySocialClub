@@ -71,6 +71,20 @@ $(document).ready(function() {
             $("body").css({
                 "background-image": VSC["Victory Social Club"]["0"].members[memberCALC(index)].background.source
             });
+            $("p, h1, h2").css({
+                "text-align": VSC["Victory Social Club"]["0"].members[memberCALC(index)]["text-align"]
+            });
+            $(".content").css({
+                "left": VSC["Victory Social Club"]["0"].members[memberCALC(index)].left
+            });
+            $("#LOGO").css({
+                "left": VSC["Victory Social Club"]["0"].members[memberCALC(index)].logo.left,
+                "top": VSC["Victory Social Club"]["0"].members[memberCALC(index)].logo.top,
+                "width": VSC["Victory Social Club"]["0"].members[memberCALC(index)].logo.width
+            });
+            $("#CREST").css({
+                "transform": VSC["Victory Social Club"]["0"].members[memberCALC(index)].logo.rotate
+            });
 
         } else if (tierCALC == 2) {
             //let memberNO = VSC["Victory Social Club"].members.length;
@@ -110,24 +124,23 @@ $(document).ready(function() {
             $("#CREST").css({
                 "transform": "rotate(1turn)"
             });
-            $("#LOGO").css({
+            /*           $("#LOGO").css({
                 "top": "50%",
                 "left": "-60%",
                 "width": "300%"
 
             });
 
+   */
         } else {
             currentHash++;
             setText(currentHash, currentTier);
-            $("#CREST").css({
-                "transform": "rotate(1turn)"
-            });
-            $("#LOGO").css({
+
+            /*      $("#LOGO").css({
                 "top": "50%",
                 "left": "-60%",
                 "width": "300%"
-            });
+            }); */
         }
 
     });
@@ -135,9 +148,7 @@ $(document).ready(function() {
     $(".right").mousedown(function() {
         currentHash--;
         setText(currentHash, currentTier);
-        $("#CREST").css({
-            "transform": "rotate(.25turn)"
-        });
+
         $("#LOGO").css({
             "top": "50%",
             "left": "100%"

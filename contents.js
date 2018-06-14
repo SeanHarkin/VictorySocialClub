@@ -61,43 +61,91 @@ let VSC = {
             "h1": "Finlay Braithwaite",
             "h2": "Audio",
             "p": "A juicer of a handy dude",
+            "text-align": "left",
+            "left": "13%",
             "background": {
                 "source": "url(Englebert.png)"
+            },
+            "logo": {
+                "rotate": "rotate(.5turn)",
+                "top": "50%",
+                "left": "-60%",
+                "width": "300%"
             },
         }, {
             "h1": "Alex Kurina",
             "h2": "Design",
             "p": "Alex Kurina is an award-winning designer, filmmaker and media artist from Toronto, Canada. He holds a BFA from Ryerson University’s New Media program where he currently teaches. He has worked for a number of international commercial clients in various creative capacities and has had work exhibited at the Montreal Museum of Fine Art, InterAccess (Toronto), The Guggenheim (New York) and Eyebeam (New York).",
+            "text-align": "right",
+            "left": "45%",
             "background": {
                 "source": "url(Colour.png)"
+            },
+            "logo": {
+                "rotate": "rotate(25turn)",
+                "top": "50%",
+                "left": "-60%",
+                "width": "300%"
             },
         }, {
             "h1": "Zach Cox",
             "h2": "Colour",
             "p": "What else can be said?",
+            "text-align": "left",
+            "left": "13%",
             "background": {
                 "source": "url(Colour.png)"
+            },
+            "logo": {
+                "rotate": "rotate(20turn)",
+                "top": "50%",
+                "left": "-60%",
+                "width": "300%"
             },
         }, {
             "h1": "Andres Landau",
             "h2": "Edit",
             "p": "What else can be said?",
+            "text-align": "right",
+            "left": "45%",
             "background": {
                 "source": "url(Colour.png)"
+            },
+            "logo": {
+                "rotate": "rotate(10turn)",
+                "top": "50%",
+                "left": "-60%",
+                "width": "300%"
             },
         }, {
             "h1": "Ryan V. Hays",
             "h2": "Composoting",
             "p": "What else can be said?",
+            "text-align": "left",
+            "left": "13%",
             "background": {
                 "source": "url(Colour.png)"
+            },
+            "logo": {
+                "rotate": "rotate(1000turn)",
+                "top": "50%",
+                "left": "-60%",
+                "width": "300%"
             },
         }, {
             "h1": "Mike McDougall",
             "h2": "3D",
             "p": "What else can be said?",
+            "text-align": "right",
+            "left": "45%",
             "background": {
-                "source": "url(Colour.png)"
+                "source": "url(.png)"
+            },
+            "logo": {
+                "rotate": "rotate(2turn)",
+                "top": "50%",
+                "left": "-60%",
+                "width": "300%"
             },
         }]
     }]
