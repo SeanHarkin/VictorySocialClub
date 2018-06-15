@@ -125,21 +125,29 @@ body {
 }
 
 .nav {
-    color: #8f8d90;
+    color: #929292;
     border: 0;
-    background: none;
+    /* background: none; */
     font-size: 2em;
     padding:  0;
     text-align:  center;
     font-family:  karla;
     cursor:  pointer;
+    background-color: #8a8a8a40;
+    height: 7%;
+    width: 28%;
+    z-index:  24;
+}
+
+.nav:focus{
+    outline: none;
 }
 
 .left {
     transform: translate(-50%,-50%) rotate(270deg);
     top:  50%;
     left: 5%;
-    width:  100%;
+    /* width:  100%; */
     position:  fixed;
 }
 
@@ -147,7 +155,7 @@ body {
     transform: translate(-50%,-50%) rotate(90deg);
     top:  50%;
     left:  95%;
-    width:  100%;
+    /* width:  100%; */
     position:  fixed;
 }
 
@@ -262,4 +270,15 @@ h2 {
     /* margin-top: 8%; */
     /* margin-right: 15%; */
     width: 40%;
+    background-color: #8686862e;
+    padding: 2%;
+}
+
+.homeButton{
+    position: fixed;
+    width: 100%;
+    transform: translate(-50%,-50%) scale(.1);
+    top: 90%;
+    left: 92%;
+    opacity: 0.5;
 }

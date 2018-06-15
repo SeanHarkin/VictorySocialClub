@@ -1,7 +1,6 @@
 let currentHash = 999;
 let currentTier = 999;
 
-//let VSC = 5;
 let tierCALC = Math.abs(currentTier % 3);
 
 $(document).ready(function() {
@@ -14,11 +13,6 @@ $(document).ready(function() {
             "opacity": "1"
         });
     });
-
-    // Your code here.
-
-    //VSC = JSON.parse('{"Victory Social Club":{"members":[{"name":"Taco Jesus","Title":"TestBoi","Bio":"Candy"},{"name":"Finlay Braithwaite","Title":"Master of Design","Bio":"A juicer of a handy dude"},{"name":"Alex Kurina","Title":"Great Person","Bio":"What else can be said?"},{"name":"Tony! Toni! Tone!","Title":"Three Tonys!","Bio":"What!!!!!"}]}}');
-    //VSC = JSON.parse('{"Victory Social Club":[{"places":[{"h1":"colour","h2":"Grading Room","p":"This is a <b>fun</b> room"},{"h1":"Sound","h2":"Audio Room","p":"This is a <b>sad</b> room"},{"h1":"Edit","h2":"Grading Room","p":"This is an <b>important</b> room"}],"members":[{"h1":"Finlay Braithwaite","h2":"Master of Design","p":"A juicer of a handy dude."},{"h1":"Alex Kurina","h2":"Great Person","p":"What else can be said?"},{"h1":"Tony! Toni! Tone!","h2":"Three Tonys!","p":"What!!!!!"}]}]}');
     console.log(VSC);
 
     setText(currentHash, currentTier);
@@ -50,13 +44,7 @@ $(document).ready(function() {
             $(".right").text("Places");
 
         } else if (tierCALC == 1) {
-            //let memberNO = VSC["Victory Social Club"].members.length;
-            //let memberCALC = Math.abs(index % VSC["Victory Social Club"]["0"].members.length);
-            //i = memberCALC.toString();
-            //let name = VSC["Victory Social Club"].members[i].name;
-            //let name = VSC["Victory Social Club"]["0"].members[i].h1;
-            //let title = VSC["Victory Social Club"]["0"].members[i].h2;
-            //let bio = VSC["Victory Social Club"]["0"].members[i].p;
+
             let name = VSC["Victory Social Club"]["0"].members[memberCALC(index)].h1;
             let title = VSC["Victory Social Club"]["0"].members[memberCALC(index)].h2;
             let bio = VSC["Victory Social Club"]["0"].members[memberCALC(index)].p;
@@ -85,15 +73,12 @@ $(document).ready(function() {
             $("#CREST").css({
                 "transform": VSC["Victory Social Club"]["0"].members[memberCALC(index)].logo.rotate
             });
-               $("p, h1, h2, .nav").css({
+            $("p, h1, h2").css({
                 "color": VSC["Victory Social Club"]["0"].members[memberCALC(index)]["text-color"]
             });
 
         } else if (tierCALC == 2) {
-            //let memberNO = VSC["Victory Social Club"].members.length;
-            //let placeCALC = Math.abs(index % VSC["Victory Social Club"]["0"].places.length);
-            //i = placeCALC.toString();
-            //let name = VSC["Victory Social Club"].members[i].name;
+
             let name = VSC["Victory Social Club"]["0"].places[placeCALC(index)].h1;
             let title = VSC["Victory Social Club"]["0"].places[placeCALC(index)].h2;
             let bio = VSC["Victory Social Club"]["0"].places[placeCALC(index)].p;
@@ -108,15 +93,6 @@ $(document).ready(function() {
 
     let frameOffset = 0.70;
 
-    /*    $(".nav").hover(function() {
-        $("#CREST").css({
-            "fill": "#ffffff4d"
-        });
-    }, function() {
-        $("#CREST").css({
-            "fill": "#60503257"
-        });
-    });*/
     $(".nav").mousedown(function() {});
 
     $(".left").click(function() {
@@ -124,69 +100,26 @@ $(document).ready(function() {
         if (tierCALC == 0) {
             currentTier++;
             setText(currentHash, currentTier);
-            $("#CREST").css({
-                "transform": "rotate(1turn)"
-            });
-            /*           $("#LOGO").css({
-                "top": "50%",
-                "left": "-60%",
-                "width": "300%"
 
-            });
 
-   */
         } else {
             currentHash++;
             setText(currentHash, currentTier);
 
-            /*      $("#LOGO").css({
-                "top": "50%",
-                "left": "-60%",
-                "width": "300%"
-            }); */
         }
-
     });
 
-    $(".right").mousedown(function() {
-        currentHash--;
-        setText(currentHash, currentTier);
+    $(".right").click(function() {
 
-        $("#LOGO").css({
-            "top": "50%",
-            "left": "100%"
-        });
+        if (tierCALC == 0) {
+            currentTier--;
+            setText(currentHash, currentTier);
 
-    });
+        } else {
+            currentHash--;
+            setText(currentHash, currentTier);
 
-    $(".up").mousedown(function() {
-        currentTier--;
-        setText(currentHash, currentTier);
-        //console.log(currentHash, currentTier);
-
-        $("#CREST").css({
-            "transform": "rotate(.5turn)"
-        });
-        $("#LOGO").css({
-            "top": "0%",
-            "left": "50%"
-        });
-
-    });
-
-    $(".down").mousedown(function() {
-        currentTier++;
-        setText(currentHash, currentTier);
-        //console.log(currentHash, currentTier);
-
-        $("#CREST").css({
-            "transform": "rotate(.75turn)"
-        });
-        $("#LOGO").css({
-            "top": "100%",
-            "left": "50%"
-        });
-
+        }
     });
 
 });
