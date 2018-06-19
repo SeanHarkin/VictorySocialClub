@@ -1,4 +1,5 @@
 let VSC = {
+  /*The JSON contains all of the content for our pages. By following a simple formula, we keep a cohesive design while allowing for all of the information required for both each member of the collective, as well as their facilities. The JSON also allows for new ‘pages’ for both facilities and members to be added easily; as well as more tiers for additional sets of these ‘pages’.*/
     "Victory Social Club": [{
         "places": [{
             "h1": "Sound",
@@ -10,6 +11,7 @@ let VSC = {
             "background": {
                 "source": "url(sound.png)"
             },
+            /*As well as the pure content for the ‘page’, the JSON also holds key information about the style for the page which is used by the css such as font colour and rotation for the background logo. Together, they seamlessly blend the transitions between colours, animations and background images.*/
             "logo": {
                 "rotate": "rotate(.5turn)",
                 "top": "50%",

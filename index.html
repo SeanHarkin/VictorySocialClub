@@ -11,7 +11,8 @@
     <link href="https://fonts.googleapis.com/css?family=Karla:400,700,400italic,700italic" rel="stylesheet" type="text/css">
     <script src="contents.js"></script>
     <script src="main.js"></script>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!-- Global site tag (gtag.js) - Google Analytics
+    Google Analytics was important to us as we developed this website with a real client in mind. The client would want to see how many hits their new page is receiving; including information on which members were bringing the most traffic and which services were of the highest interest to their own customers.-->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120912548-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -25,6 +26,7 @@
 </head>
 <body>
     <div class="launch">
+      <!--We used css to animate the logo svg by separating it down to lines, paths and elements and using keyframes.-->
         <svg version="1.1" id="launchSVG" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1366 768" style="enable-background:new 0 0 1366 768;" xml:space="preserve">
             <path id="shield" class="shield" style="fill:#FFFFFF;stroke:#4D4D4D;stroke-width:16.7082;stroke-miterlimit:10;" d="M683,160.1
             c-131.9,0-189.1,52.8-189.1,52.8c0,340.2,189.1,395,189.1,395h0c0,0,189.1-54.8,189.1-395C872.1,212.9,814.9,160.1,683,160.1"/>
@@ -43,9 +45,12 @@
         </svg>
     </div>
     <div class="mainSite">
+      <!--We decided early on that we wanted one ‘page’ which would have changing content without a hard-reload of the site. We explored a number of options including jquery plug-ins, ajax (the proper way) but ultimately found a creative solution in the JSONs which could hold all of our information, and be displayed or hidden at will.-->
         <button class="nav left">left</button>
         <button class="nav right">right</button>
+        <!--These first 2 buttons select which ‘tier’ the user is looking at which is the first factor which allows us to control which content is currently showing.-->
         <div class="homeButton">
+          <!--The home-button allows users to return to the ‘homepage’ to allow for navigation to other ‘pages’. We did try to use the cssshake plug-in to add a small animation on hover, however we ran into some bugs with other elements on the page. Ultimately we decided that although this would have been a nice UI addition, it was too distracting with other elements randomly shaking around.-->
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="730 165 200 200">
                 <defs>
                     <style>
@@ -114,6 +119,7 @@
             </svg>
         </div>
         <div class="content">
+          <!--This div holds all of the content, which is then set by which tier and class the user is currently viewing. By placing all of our content in JSONs this way, it allows us to quickly add, change or remove entire ‘pages’. Although not a conventional solution, we feel this adds a flexibility to the website which the client would favour. -->
             <h1>h1</h1>
             <h2>h2</h2>
             <p>p</p>
