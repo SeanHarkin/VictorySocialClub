@@ -35,7 +35,7 @@ let VSC = {
         }, {
             "h1": "Colour",
             "h2": "3D",
-            "p": "A cutting-edge space to bring your pictures to life. This room has a rich history of commercial and indie projects under its belt.<br><br>Services include: <ul><li>4k Secondary Colour with multiple windows</li><li>Davnici Resolve Pro</li><li>Calibrated Monitor</li><li>Netrual reference space</li></ul>",
+            "p": "A cutting-edge space to bring your pictures to life. This room has a rich history of commercial and indie projects under its belt.<br><br>Services include: <ul><li>4k Secondary Colour with multiple windows</li><li>Davnici Resolve Pro</li><li>Calibrated Monitor</li><li>Neutral reference space</li></ul>",
             "text-align": "left",
             "left": "45%",
             "color": "#03a9f4",

@@ -10,6 +10,16 @@ let mainBgOpacityHex = "21";
 
 let tierCALC = Math.abs(currentTier % 3);
 
+$.fn.preload = function() {
+    this.each(function() {
+        $('<img/>')[0].src = this;
+    });
+}
+
+// Usage:
+
+$(['alex.png', 'finlay.png', 'mike.png', 'zach.png', 'ryan.png', 'andres.png', 'sound.png', 'colour.png', 'edit.png', 'black.png']).preload();
+
 $(document).ready(function() {
 
     $(".launch").click(function() {
@@ -49,8 +59,8 @@ $(document).ready(function() {
             $("p").text("Victory Social Club is a multi-disciplinary production and design studio comprised of award-winning filmmakers, visual effects artists, 2D and 3D animators, compositors, designers, sound editors and picture editors.");
             $(".left").text("People");
             $(".right").text("Places");
-               $("body").css({
-                "background-image": "none"
+            $("body").css({
+                "background-image": "url(black.png)"
             });
             $("p, h1, h2").css({
                 "text-align": "left"
@@ -74,7 +84,7 @@ $(document).ready(function() {
                 "background-color": mainColor + mainBgOpacityHex
             });
             $(".nav").css({
-                "color":mainColor
+                "color": mainColor
             });
             $("#CREST").css({
                 "fill": mainColor
@@ -92,9 +102,6 @@ $(document).ready(function() {
                 "stroke": homeDarkHex
             });
 
-
-
-
         } else if (tierCALC == 1) {
 
             let name = VSC["Victory Social Club"]["0"].members[memberCALC(index)].h1;
@@ -105,9 +112,9 @@ $(document).ready(function() {
             $("p").text(bio);
             $(".left").text(VSC["Victory Social Club"]["0"].members[memberCALC(index + 1)].h1);
             $(".right").text(VSC["Victory Social Club"]["0"].members[memberCALC(index - 1)].h1);
-//             $("body").css({
-//                 "background-image": VSC["Victory Social Club"]["0"].members[memberCALC(index)].background.source
-//             });
+            //             $("body").css({
+            //                 "background-image": VSC["Victory Social Club"]["0"].members[memberCALC(index)].background.source
+            //             });
             $("body").css({
                 "background-image": VSC["Victory Social Club"]["0"].members[memberCALC(index)].background.source
             });
@@ -161,11 +168,10 @@ $(document).ready(function() {
             $("p").html(bio);
             $(".left").text(VSC["Victory Social Club"]["0"].places[placeCALC(index + 1)].h1);
             $(".right").text(VSC["Victory Social Club"]["0"].places[placeCALC(index - 1)].h1);
-                        $("body").css({
+            $("body").css({
                 "background-image": VSC["Victory Social Club"]["0"].places[placeCALC(index)].background.source
             });
 
-            
             $("p, h1, h2").css({
                 "text-align": VSC["Victory Social Club"]["0"].places[placeCALC(index)]["text-align"]
             });
@@ -239,11 +245,10 @@ $(document).ready(function() {
         }
     });
 
-       $(".homeButton").click(function() {
+    $(".homeButton").click(function() {
 
         currentTier = 999;
-            setText(currentHash, currentTier);
-
+        setText(currentHash, currentTier);
 
     });
 
