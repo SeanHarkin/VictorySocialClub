@@ -1,4 +1,4 @@
-# Web + Mobile System Design DIGF-6039-001
+# Web + Mobile System Design DIGF6039
 ## Collaborative Coding Project
 #### Finlay Braithwaite, Sean Harkin, Qian Yang
 ### Rationale
