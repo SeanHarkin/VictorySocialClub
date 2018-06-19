@@ -29,6 +29,7 @@ $(document).ready(function() {
         $(".mainSite").css({
             "opacity": "1"
         });
+        setText(currentTier,currentHash);
     });
     console.log(VSC);
 
@@ -217,7 +218,6 @@ $(document).ready(function() {
 
     let frameOffset = 0.70;
 
-    $(".nav").mousedown(function() {});
 
     $(".left").click(function() {
 
