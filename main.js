@@ -1,26 +1,31 @@
-let currentHash = 999;
-let currentTier = 999;
-let bgOpacityHex = "0f";
+let currentPage = 999; //What page are we on? modulus functions make these adhere to proper range. Set away from 0, as behaviour is different around 0.
+let currentTier = 999; //What level or tier in our site flow are we on?
+let mainColor = "#e2be23"; //main site color
+let bgOpacityHex = "0f"; //opacity values to be appended to colour values.
 let textOpacityHex = "36";
 let logoOpacityHex = "21";
 let homeOpacityHex = "66";
 let homeDarkHex = "#00000096";
-let mainColor = "#e2be23";
 let mainBgOpacityHex = "21";
 
-let tierCALC = Math.abs(currentTier % 3);
+let tierCALC = Math.abs(currentTier % 3); //modulus function to bring currentTier into bounds.
 
+console.log(VSC);
+//a reference of the VSC object for manipulating the DOM
+
+// Preload Images
 $.fn.preload = function() {
     this.each(function() {
         $('<img/>')[0].src = this;
     });
 }
-
-// Usage:
-
 $(['alex.png', 'finlay.png', 'mike.png', 'zach.png', 'ryan.png', 'andres.png', 'sound.png', 'colour.png', 'edit.png', 'black.png']).preload();
 
+//JQUERY loads after document ready. All JQUERY within this function.
+
 $(document).ready(function() {
+
+    //Initial launch. Clicking on logo activates main site. Using opacity instead of show/hide to allow for transition.
 
     $(".launch").click(function() {
         $(".launch").css({
@@ -29,31 +34,34 @@ $(document).ready(function() {
         $(".mainSite").css({
             "opacity": "1"
         });
-        setText(currentTier,currentHash);
+        setPage(currentPage, currentTier);
     });
-    console.log(VSC);
 
-    setText(currentHash, currentTier);
-    function memberCALC(index) {
-        let memberCALC = Math.abs(index % VSC["Victory Social Club"]["0"].members.length);
-        i = memberCALC.toString();
+    //this function sets the page's content. See function below.
+    setPage(currentPage, currentTier);
+
+    //These functions generate an index calculation based on a modulus of the array length. In this case, for people and places.
+    function memberCALC(pageIndex) {
+        let memberCALC = Math.abs(pageIndex % VSC["Victory Social Club"][0].members.length);
+        i = memberCALC;
         return i;
 
     }
 
-    function placeCALC(index) {
-        let placeCALC = Math.abs(index % VSC["Victory Social Club"]["0"].places.length);
-        i = placeCALC.toString();
+    function placeCALC(pageIndex) {
+        let placeCALC = Math.abs(pageIndex % VSC["Victory Social Club"][0].places.length);
+        i = placeCALC;
         return i;
 
     }
 
-    function setText(index, tier) {
+    //this function sets the text and other elements of each page. For the main page, this is called in the script. For members and places, all info is called from the VSC object.
+    function setPage(pageIndex, tier) {
+
+        //a calculation so that tier is never out of bounds.
         tierCALC = Math.abs(tier % 3);
 
-        console.log(tierCALC);
-        $(".nav").text("");
-
+        //main page
         if (tierCALC == 0) {
             $("h1").text("Victory Social Club");
             $("h2").text("Collaborative Community");
@@ -78,6 +86,9 @@ $(document).ready(function() {
             $("#CREST").css({
                 "transform": "rotate(0turn)"
             });
+
+            // colors are HEX, allow an alpha HEX to be concatanated, mainBGOpacityHex, for example
+
             $("p, h1, h2").css({
                 "color": mainColor
             });
@@ -103,54 +114,52 @@ $(document).ready(function() {
                 "stroke": homeDarkHex
             });
 
-        } else if (tierCALC == 1) {
+            //people page
 
-            let name = VSC["Victory Social Club"]["0"].members[memberCALC(index)].h1;
-            let title = VSC["Victory Social Club"]["0"].members[memberCALC(index)].h2;
-            let bio = VSC["Victory Social Club"]["0"].members[memberCALC(index)].p;
-            $("h1").text(name);
-            $("h2").text(title);
-            $("p").text(bio);
-            $(".left").text(VSC["Victory Social Club"]["0"].members[memberCALC(index + 1)].h1);
-            $(".right").text(VSC["Victory Social Club"]["0"].members[memberCALC(index - 1)].h1);
-            //             $("body").css({
-            //                 "background-image": VSC["Victory Social Club"]["0"].members[memberCALC(index)].background.source
-            //             });
+        } else if (tierCALC == 1) {
+            //for people and places, content and paramters are pulled from VSC object, automating the page buidling, and simplifying content revisions and additions.
+
+            $("h1").text(VSC["Victory Social Club"][0].members[memberCALC(pageIndex)].h1);
+            $("h2").text(VSC["Victory Social Club"][0].members[memberCALC(pageIndex)].h2);
+            $("p").text(VSC["Victory Social Club"][0].members[memberCALC(pageIndex)].p);
+            //left and right buttons are contextual using the CALC modulus functions.
+            $(".left").text(VSC["Victory Social Club"][0].members[memberCALC(pageIndex + 1)].h1);
+            $(".right").text(VSC["Victory Social Club"][0].members[memberCALC(pageIndex - 1)].h1);
             $("body").css({
-                "background-image": VSC["Victory Social Club"]["0"].members[memberCALC(index)].background.source
+                "background-image": VSC["Victory Social Club"][0].members[memberCALC(pageIndex)].background.source
             });
             $("p, h1, h2").css({
-                "text-align": VSC["Victory Social Club"]["0"].members[memberCALC(index)]["text-align"]
+                "text-align": VSC["Victory Social Club"][0].members[memberCALC(pageIndex)]["text-align"]
             });
             $(".content").css({
-                "left": VSC["Victory Social Club"]["0"].members[memberCALC(index)].left
+                "left": VSC["Victory Social Club"][0].members[memberCALC(pageIndex)].left
             });
             $("#LOGO").css({
-                "width": VSC["Victory Social Club"]["0"].members[memberCALC(index)].logo.width,
+                "width": VSC["Victory Social Club"][0].members[memberCALC(pageIndex)].logo.width,
                 "transform": "translate(-50%,-50%)",
-                "left": VSC["Victory Social Club"]["0"].members[memberCALC(index)].logo.left,
-                "top": VSC["Victory Social Club"]["0"].members[memberCALC(index)].logo.top
+                "left": VSC["Victory Social Club"][0].members[memberCALC(pageIndex)].logo.left,
+                "top": VSC["Victory Social Club"][0].members[memberCALC(pageIndex)].logo.top
             });
             $("#CREST").css({
-                "transform": VSC["Victory Social Club"]["0"].members[memberCALC(index)].logo.rotate
+                "transform": VSC["Victory Social Club"][0].members[memberCALC(pageIndex)].logo.rotate
             });
             $("p, h1, h2").css({
-                "color": VSC["Victory Social Club"]["0"].members[memberCALC(index)]["color"]
+                "color": VSC["Victory Social Club"][0].members[memberCALC(pageIndex)]["color"]
             });
             $(".nav, .content").css({
-                "background-color": VSC["Victory Social Club"]["0"].members[memberCALC(index)]["color"].toString() + bgOpacityHex
+                "background-color": VSC["Victory Social Club"][0].members[memberCALC(pageIndex)]["color"].toString() + bgOpacityHex
             });
             $(".nav").css({
-                "color": VSC["Victory Social Club"]["0"].members[memberCALC(index)]["color"].toString() + textOpacityHex
+                "color": VSC["Victory Social Club"][0].members[memberCALC(pageIndex)]["color"].toString() + textOpacityHex
             });
             $("#CREST").css({
-                "fill": VSC["Victory Social Club"]["0"].members[memberCALC(index)]["color"].toString() + logoOpacityHex
+                "fill": VSC["Victory Social Club"][0].members[memberCALC(pageIndex)]["color"].toString() + logoOpacityHex
             });
             $(".cls-9").css({
-                "fill": VSC["Victory Social Club"]["0"].members[memberCALC(index)]["color"].toString() + homeOpacityHex
+                "fill": VSC["Victory Social Club"][0].members[memberCALC(pageIndex)]["color"].toString() + homeOpacityHex
             });
             $(".cls-9").css({
-                "fill": VSC["Victory Social Club"]["0"].members[memberCALC(index)]["color"].toString() + homeOpacityHex
+                "fill": VSC["Victory Social Club"][0].members[memberCALC(pageIndex)]["color"].toString() + homeOpacityHex
             });
             $(".cls-10").css({
                 "fill": homeDarkHex
@@ -161,50 +170,47 @@ $(document).ready(function() {
 
         } else if (tierCALC == 2) {
 
-            let name = VSC["Victory Social Club"]["0"].places[placeCALC(index)].h1;
-            let title = VSC["Victory Social Club"]["0"].places[placeCALC(index)].h2;
-            let bio = VSC["Victory Social Club"]["0"].places[placeCALC(index)].p;
-            $("h1").text(name);
-            $("h2").text(title);
-            $("p").html(bio);
-            $(".left").text(VSC["Victory Social Club"]["0"].places[placeCALC(index + 1)].h1);
-            $(".right").text(VSC["Victory Social Club"]["0"].places[placeCALC(index - 1)].h1);
+            //rinse & repeate for places. 
+            $("h1").text(VSC["Victory Social Club"][0].places[placeCALC(pageIndex)].h1);
+            $("h2").text(VSC["Victory Social Club"][0].places[placeCALC(pageIndex)].h2);
+            $("p").html(VSC["Victory Social Club"][0].places[placeCALC(pageIndex)].p);
+            $(".left").text(VSC["Victory Social Club"][0].places[placeCALC(pageIndex + 1)].h1);
+            $(".right").text(VSC["Victory Social Club"][0].places[placeCALC(pageIndex - 1)].h1);
             $("body").css({
-                "background-image": VSC["Victory Social Club"]["0"].places[placeCALC(index)].background.source
+                "background-image": VSC["Victory Social Club"][0].places[placeCALC(pageIndex)].background.source
             });
-
             $("p, h1, h2").css({
-                "text-align": VSC["Victory Social Club"]["0"].places[placeCALC(index)]["text-align"]
+                "text-align": VSC["Victory Social Club"][0].places[placeCALC(pageIndex)]["text-align"]
             });
             $(".content").css({
-                "left": VSC["Victory Social Club"]["0"].places[placeCALC(index)].left
+                "left": VSC["Victory Social Club"][0].places[placeCALC(pageIndex)].left
             });
             $("#LOGO").css({
-                "width": VSC["Victory Social Club"]["0"].places[placeCALC(index)].logo.width,
+                "width": VSC["Victory Social Club"][0].places[placeCALC(pageIndex)].logo.width,
                 "transform": "translate(-50%,-50%)",
-                "left": VSC["Victory Social Club"]["0"].places[placeCALC(index)].logo.left,
-                "top": VSC["Victory Social Club"]["0"].places[placeCALC(index)].logo.top
+                "left": VSC["Victory Social Club"][0].places[placeCALC(pageIndex)].logo.left,
+                "top": VSC["Victory Social Club"][0].places[placeCALC(pageIndex)].logo.top
             });
             $("#CREST").css({
-                "transform": VSC["Victory Social Club"]["0"].places[placeCALC(index)].logo.rotate
+                "transform": VSC["Victory Social Club"][0].places[placeCALC(pageIndex)].logo.rotate
             });
             $("p, h1, h2").css({
-                "color": VSC["Victory Social Club"]["0"].places[placeCALC(index)]["color"]
+                "color": VSC["Victory Social Club"][0].places[placeCALC(pageIndex)]["color"]
             });
             $(".nav, .content").css({
-                "background-color": VSC["Victory Social Club"]["0"].places[placeCALC(index)]["color"].toString() + bgOpacityHex
+                "background-color": VSC["Victory Social Club"][0].places[placeCALC(pageIndex)]["color"].toString() + bgOpacityHex
             });
             $(".nav").css({
-                "color": VSC["Victory Social Club"]["0"].places[placeCALC(index)]["color"].toString() + textOpacityHex
+                "color": VSC["Victory Social Club"][0].places[placeCALC(pageIndex)]["color"].toString() + textOpacityHex
             });
             $("#CREST").css({
-                "fill": VSC["Victory Social Club"]["0"].places[placeCALC(index)]["color"].toString() + logoOpacityHex
+                "fill": VSC["Victory Social Club"][0].places[placeCALC(pageIndex)]["color"].toString() + logoOpacityHex
             });
             $(".cls-9").css({
-                "fill": VSC["Victory Social Club"]["0"].places[placeCALC(index)]["color"].toString() + homeOpacityHex
+                "fill": VSC["Victory Social Club"][0].places[placeCALC(pageIndex)]["color"].toString() + homeOpacityHex
             });
             $(".cls-9").css({
-                "fill": VSC["Victory Social Club"]["0"].places[placeCALC(index)]["color"].toString() + homeOpacityHex
+                "fill": VSC["Victory Social Club"][0].places[placeCALC(pageIndex)]["color"].toString() + homeOpacityHex
             });
             $(".cls-10").css({
                 "fill": homeDarkHex
@@ -216,18 +222,16 @@ $(document).ready(function() {
 
     }
 
-    let frameOffset = 0.70;
-
-
+//buttons. Tier dependent behaviour. With every button push, setPage is called.
     $(".left").click(function() {
 
         if (tierCALC == 0) {
             currentTier++;
-            setText(currentHash, currentTier);
+            setPage(currentPage, currentTier);
 
         } else {
-            currentHash++;
-            setText(currentHash, currentTier);
+            currentPage++;
+            setPage(currentPage, currentTier);
 
         }
     });
@@ -236,19 +240,21 @@ $(document).ready(function() {
 
         if (tierCALC == 0) {
             currentTier--;
-            setText(currentHash, currentTier);
+            setPage(currentPage, currentTier);
 
         } else {
-            currentHash--;
-            setText(currentHash, currentTier);
+            currentPage--;
+            setPage(currentPage, currentTier);
 
         }
     });
 
+    //home button
+
     $(".homeButton").click(function() {
 
         currentTier = 999;
-        setText(currentHash, currentTier);
+        setPage(currentPage, currentTier);
 
     });
 
